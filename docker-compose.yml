@@ -42,12 +42,3 @@ services:
       - ./consul/config/consul-config.json:/consul/config/config.json
     depends_on:
       - consul
-
-  nginx:
-    build: ./nginx
-    container_name: consul-nginx-prod
-    restart: always
-    ports:
-      - 1338:80
-    depends_on:
-      - consul
